@@ -1,0 +1,242 @@
+/*start header*/
+
+
+.header{
+	background-image: url("../images/jungle2.jpg");
+}
+.blacksqr{
+	margin: 0px 100px;
+	padding-bottom: 30px;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+
+/*end header*/
+/*start navbar*/
+
+
+.navibar{
+	position: sticky;
+	top: 0px;
+	z-index: 5;
+	font-family: "verdana";
+	font-size: 20px;
+	background-color:  #333333;
+}
+.buttons{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 35px;
+}
+.buttons:hover{
+	color: yellow;	
+}
+#active{
+	background-color: #558000;
+	border-radius: 10px;
+	color: white;
+}
+#active:hover{
+	color: yellow;	
+}
+
+.modal{
+	display: none;
+	z-index: 1; 
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0,0,0,.5);
+	padding: 100px;
+}
+#myBtn{
+	border: none;
+	background-color:  #333333;
+	color: white;
+	padding: 15px;
+}
+#myBtn:hover{
+	color: yellow;
+}
+
+
+/*end navbar*/
+/*start missionbox*/
+
+
+.missionbox{
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10% 20%;
+}
+.missiontitle{
+	font-size: 36px;
+	color: #8cff1a;
+}
+.missstatement{
+	font-size: 20px;
+}
+
+
+/*end missionbox*/
+/*start factbox*/
+
+
+.factbox{
+	display: flex;
+	flex-direction: column;
+	background-image: url("../images/background wood.jpg"); 
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	border:  3px solid yellowgreen;       /*left on purpose, I liked it*/ 
+	color: white;
+	padding: 40px 100px;
+}
+.boxtitle{
+	font-family: "Brush Script MT";
+	font-size: 70px;
+	text-align: center;
+	padding-bottom: 38px;
+}
+.itemsLeft{
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	text-align: left;
+	font-size: 20px;
+	padding: 200px 50px;
+}
+.itemsRight{
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(0, 0, 0, .6);
+	text-align: left;
+	font-size: 20px;
+	padding: 200px 50px;
+}
+.paragraphtitles{
+	font-size: 60px;
+	color: #8cff1a;
+	text-align: center;
+	align-self: center;
+	padding: 20px;
+}
+.title-photo{
+	align-self: center;
+	width: 50%;
+}
+.words{
+	width: 50%;
+	align-self: center;
+	padding: 10px 40px;
+}
+.photos{
+	align-self: center;
+	width: 100%;
+}
+
+
+/*start page responsiveness*/
+
+
+@media (max-width: 1000px) {
+	.blacksqr{
+		margin: 0px 50px;
+		padding-bottom: 10px;
+	}
+	.navibar{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.navibar{
+		font-size: 18px;
+	}
+	.buttons{
+		padding: 15px 25px;
+	}
+	.missionbox{
+		padding: 25% 10%;
+	}
+	.itemsLeft{
+		flex-direction: column;
+		font-size: 18px;
+		padding: 70px 0px;
+	}
+	.itemsRight{
+		flex-direction: column-reverse;
+		font-size: 18px;
+		padding: 70px 10px;
+	}
+	.title-photo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 95%;
+	}
+	.photos{
+		width: 70%;
+	}
+	.words{
+		width: 100%;
+		font-size: 20px;
+	}
+}
+@media (max-width: 800px) {
+	.blacksqr{
+		margin: 0px 25px;
+		padding-bottom: 0px;
+	}
+	#headertitles{
+		font-size: 30px;
+	}
+	.navibar{
+		display: flex;
+		flex-direction: column;
+		position: static;
+	}
+	.missionbox{
+		padding: 30% 10%;
+	}
+	.missiontitle{
+		font-size: 32px;
+	}
+	.missstatement{
+		font-size: 16px;
+	}
+	.factbox{
+		padding: 40px 15px;
+	}
+	.facttitle{
+		font-size: 50px;
+		padding-bottom: 40px;
+	}
+	.title-photo{
+		width: 95%;
+	}
+	.paragraphtitles{
+		font-size: 30px;
+		color: #8cff1a;
+		text-align: center;
+		align-self: center;
+		padding-bottom: 40px;
+	}
+	.itemsLeft{
+		flex-direction: column;
+		font-size: 18px;
+	}
+	.itemsRight{
+		flex-direction: column-reverse;
+		font-size: 18px;
+	}
+	.words{
+		font-size: 16px;
+		padding: 10px 5px;
+		width: 95%;
+	}
+	.photos{
+		width: 100%;
+	}
+}

@@ -1,0 +1,313 @@
+/*start header*/
+
+
+.header{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	background-position: top;
+	background-image: url("../images/jungle2.jpg");
+	color: white;
+	text-shadow: 2px 2px 3px black;
+	height: 400px;
+}
+.behind{
+	background-color: rgba(0, 0, 0, .8);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+
+/*end header*/
+/*start navbar*/
+
+
+.navibar{
+	position: sticky;
+	top: 0px;
+	z-index: 5;
+	font-family: "verdana";
+	font-size: 20px;
+	background-color:  #333333;
+	min-height: 50px;
+}
+.buttons{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 35px;
+	text-decoration: none;
+}
+.buttons:hover{
+	color: yellow;	
+}
+#active{
+	background-color: #558000;
+	border-radius: 10px;
+	color: white;
+}
+#active:hover{
+	color: yellow;	
+}
+.modal{
+	display: none;
+	z-index: 1;
+	padding: 100px; 
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0,0,0,.5);
+}
+#myBtn{
+	border: none;
+	padding: 15px;
+	background-color:  #333333;
+	color: white;
+}
+#myBtn:hover{
+	color: yellow;
+}
+
+
+/*end navbar*/
+/*start outer flexbox (midbox) with two inner flexbox columns*/
+
+
+.midbox{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+.doublecolumn{
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0px 10px;
+}
+
+
+/* left side */
+
+
+#searchcolumn{
+	flex: 4;
+	background-color: #333333;
+}
+.searchby{
+	color: white;
+	font-size: 26px;
+	padding: 10px;
+	margin: 10px;
+}
+.searchboxes{
+	background-color: #558000;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+}
+.select{
+	color: white;
+	text-decoration: none;
+}
+.select:hover{
+	color: #cfff66;
+}
+
+
+/* right side */
+
+
+#rightside{
+	flex: 8;
+}
+.righttitle{
+	font-size: 26px;
+	margin: 10px;
+	padding: 10px;
+}
+.lilboxes{
+	display: flex;
+	flex-direction: row;
+	background-color: #eeffcc;
+	border-radius: 5px;
+	transition: .5s;
+	margin: 20px;
+}
+.lilboxes:hover{
+	background-color: #cfff66;
+}
+.photos{
+	width: 200px;
+	border-radius: 5px;
+}
+.companynames{
+	flex-grow: 1;
+	font-size: 20px;
+	padding: 20px;
+}
+.underwords{
+	font-size: 14px;
+}
+.pricing{
+	font-size: 25px;
+	padding: 30px;
+}
+
+
+/*end midbox*/
+/*start footer*/
+
+
+.footer{
+	align-content: center;
+	margin: 10px;
+	padding: 25px 0;
+	border-radius: 9px;
+	color: white;
+	height: 100px;
+	background-image: url("../images/jungle2.jpg");
+}
+.items{
+	background-color: rgba(0, 0, 0, .6);
+	border-radius: 9px;
+	margin: auto;
+	padding:10px;
+}
+
+
+/*start page responsiveness*/
+
+
+@media (max-width: 1000px) {
+	
+	.navibar{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.navibar{
+		font-size: 18px;
+	}
+	.midbox{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.doublecolumn{
+		margin: 0px;
+		padding: 5px;
+	}
+	#searchcolumn{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 80%;
+	}
+	.map{
+		width: 80%;
+		margin-top: 20px;
+	}
+	.searchby{
+		margin: 5px;
+		padding: 5px 250px;
+	}
+	.searchboxes{
+		margin: 10px;
+		padding: 10px;
+	}
+	.righttitle{
+		font-size: 26px;
+		text-align: center;
+		padding: 30px 10px;
+	}
+	.lilboxes{
+		flex-direction: row;
+		margin: 10px;
+	}
+	.photos{
+		height: 100px;
+	}
+	.companynames{
+		font-size: 18px;
+		padding: 10px;
+	}
+	.underwords{
+		font-size: 10px;
+	}
+	.pricing{
+		text-align: right;
+		float: right;
+		font-size: 16px;
+		padding: 10px;
+	}
+}
+@media (max-width: 800px) {
+	.header{
+		align-items: center;
+		justify-content: center;
+		height: 400px;
+	}
+	.navibar{
+		display: flex;
+		flex-direction: column;
+		position: static;
+	}
+	.midbox{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	.doublecolumn{
+		padding: 5px;
+		margin: 0px;
+		width: 100%;
+	}
+	#searchcolumn{
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+	}
+	.map{
+		width: 100%;
+	}
+	.searchby{
+		margin: 5px;
+		padding: 5px;
+	}
+	.searchboxes{
+		margin: 10px;
+		padding: 10px;
+	}
+	.righttitle{
+		font-size: 26px;
+		text-align: center;
+		padding: 30px 10px;
+	}
+	.lilboxes{
+		flex-direction: row;
+		margin: 10px;
+	}
+	.photos{
+		height: 100px;
+	}
+	.companynames{
+		font-size: 18px;
+		padding: 10px;
+	}
+	.underwords{
+		font-size: 10px;
+	}
+	.pricing{
+		text-align: right;
+		float: right;
+		font-size: 16px;
+		padding: 10px;
+	}
+	#unrulyphoto{
+		width: 150px;
+	}
+}
